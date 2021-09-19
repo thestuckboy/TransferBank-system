@@ -1,0 +1,16 @@
+Form:
+
+name
+password
+age
+agree
+
+Account Schema:
+
+    -fullname: String,
+    -password: String,
+    -bankKey: String,
+    -balance: Number,
+    -age: Number,
+    -agreeterms: Boolean,
+    -contacts: Object

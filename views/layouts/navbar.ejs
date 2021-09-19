@@ -1,0 +1,25 @@
+<nav>
+    <div class="separation">
+        <div class="d-flex">
+            <div class="brand">
+                <label><i class="fas fa-university"></i>Transfer Bank</label>
+            </div>
+            <ul>
+                <% if(!user){ %>
+                <li><a href="/">Home<i class="fas fa-home"></i></a></li>
+                <li><a href="/login">Login<i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="/create-wallet">Create wallet<i class="fas fa-wallet"> +</i></a></li>
+                <% } %>
+                <% if(user){ %>
+                <li id="dropdownHover"><a href="#"><%= user.fullname %><i class="fas fa-chevron-down"></i></a>
+                    <ul id="dropdown">
+                        <li><a href="/dashboard"><i class="fas fa-file-invoice-dollar"></i>Account</a></li>
+                        <li><a href="/transfer"><i class="fas fa-exchange-alt"></i>Transfer</a></li>
+                        <li><a href="/logout"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+                    </ul>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>

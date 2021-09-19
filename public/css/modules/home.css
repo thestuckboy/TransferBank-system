@@ -1,0 +1,61 @@
+.main {
+    height: 94vh;
+    background-color: rgb(33, 33, 33, .89);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.presentation {
+    display: flex;
+    height: 75%;
+    width: 75%;
+    font-family: var(--default-font);
+    color: white;
+}
+
+.presentation > * {
+    width: 50%;
+}
+
+.presentation div:first-child i{
+    font-size: 100px;
+    color: greenyellow;
+}
+
+.presentation div:first-child, .presentation div:nth-child(2) {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.presentation div:nth-child(2) i{
+    font-size: 100px;
+}
+
+.presentation div:nth-child(2) .wallet{
+    font-size: 20px;
+    margin: 0 10px 0 0;
+}
+
+.register {
+    display: flex;
+    align-items: center;
+}
+
+.presentation div:nth-child(2) a{
+    margin: 20px 0 0 0;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    transition: background-color .5s, color .5s, border .5s;
+}
+
+.presentation div:nth-child(2) a:hover{
+    background-color: greenyellow;
+    border: greenyellow 1px solid;
+    color:rgb(33, 33, 33);
+}

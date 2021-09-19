@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Bank - Your key</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!--Font Awesome-->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!--Own Stylesheet-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <%- include('layouts/navbar.ejs'); %>
+    </header>
+    <div class="bank-background">
+        <div class="key-content">
+            <div class="instructions">
+                <h1>This is your key <i class="fas fa-key"></i></h1>
+                <p>This is the <b>key</b> you're gonna need to <b>get</b> access to your wallet again. Write it on a piece of paper and put it on a <b>secure place</b>. <b class="red">DO NOT</b> share this key with anyone else. <br><br><b>NOTE:</b> You'll not be able to see your key again, so write it on a paper</p>
+                <div class="key">
+                    <% if(key){ %>
+                        <input type="password" id="key" value="<%= key %>" disabled="on">
+                    <%}%>
+                    <button id="showButton"><i class="fas fa-eye" id="eyeIcon"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Bank - Create wallet</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!--Font Awesome-->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!--Own Stylesheet-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <%- include('layouts/navbar.ejs'); %>
+    </header>
+
+    <div class="bank-background">
+        <div class="black-bg">
+            <div class="separation">
+                <div class="transfer">
+                    <div class="contacts">
+                        <h2>Select contact:</h2>
+                        <select name="select" id="select">
+                            <option value="none" selected>None</option>
+                            <% user.contacts.forEach((i) => { %>
+                                <option value="<%= i.fullname %>"><%= i.fullname %></option>
+                            <% }); %>
+                        </select>
+                        <label id="contactsMessage"></label>
+                        <button id="searchContacts">Buscar</button>
+                    </div>
+                    <div class="not-contact">
+                        <h4>You do not have contacts? <a  href="#" id="addButton">add here.</a></h4>
+                    </div>
+                    <div class="add-data" id="addData">
+                        <label>To-transfer key:</label>
+                        <input type="text" id="keyInput">
+                        <label id="transferMessage"></label>
+                        <button id="searchButton">Add</button>
+                    </div>
+                    <div class="transfer-data">
+                        <label>Transfer to:</label>
+                        <input type="text" id="transferToKey" disabled>
+                        <label>Amount:</label>
+                        <input type="number" id="amountField">
+                        <label id="operationResultMessage"></label>
+                        <button id="transferButton">Transfer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascript/transfer.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.form-container {
+    background-color: rgb(33, 33, 33, .89);
+    height: 94vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: 1px solid rgb(33, 33, 33);
+    background-color: rgb(33, 33, 33, 0.4);
+    border-radius: 5px;
+}
+
+.createTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    color: rgb(226, 227, 227);
+    font-family: var(--default-font);
+}
+
+.form > label {
+    color: rgb(226, 227, 227, 0.8);
+    font-family: var(--default-font);
+    font-size: 18px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="number"]{
+    height: 40px;
+    width: 250px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: rgb(33, 33, 33, 0.7);
+    border: 1px solid rgb(33, 33, 33);
+    transition: background-color .5s, height .5s;
+    padding-left:10px;
+    color: rgb(226, 227, 227);
+}
+
+.form input::placeholder{
+    color: rgb(226, 227, 227, 0.8);
+}
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus,
+.form input[type="number"]:focus{
+    background-color: rgb(33, 33, 33);
+    height: 50px;
+    color: rgb(226, 227, 227);
+    outline: none;
+}
+
+.form button[type="submit"]{
+    width:100%;
+    padding: 12px 0;
+    font-size: 18px;
+    background-color: rgb(226, 227, 227, 0.8);
+    color: rgb(33, 33, 33);
+    border: none;
+    transition: background .2s, color .2s;
+}
+
+.form button[type="submit"]:hover{
+    cursor: pointer;
+    background: rgb(33, 33, 33);
+    color: rgb(226, 227, 227, 0.8);
+}
+
+.form input:first-child {
+    margin: 0 0 5px 0;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    color: rgb(226, 227, 227, 0.8);
+    font-family: var(--default-font);
+    font-size: 18px;
+}
+
+.terms label {
+    margin-left: 5px;
+}

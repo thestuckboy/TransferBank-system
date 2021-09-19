@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Bank - Create wallet</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!--Font Awesome-->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!--Own Stylesheet-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <%- include('layouts/navbar.ejs'); %>
+    </header>
+
+    <div class="bank-background">
+        <div class="form-container">
+            <form action="/create-wallet" method="POST" class="form">
+                <div class="createTitle">
+                    <label>Wallet Creator</label>
+                </div>
+                <label>Full name:</label>
+                <input name="name" type="text" placeholder="John Doe">
+                <label>Password:</label>
+                <input name="password" type="password" placeholder="•••••••••••">
+                <label>Age:</label>
+                <input name="age" type="number">
+                <div class="terms">
+                    <input name="agree" type="checkbox"><label>I agree with the terms of services</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

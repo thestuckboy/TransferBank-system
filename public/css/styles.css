@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
+@import url('modules/nav.css');
+@import url('modules/home.css');
+@import url('modules/createwallet.css');
+@import url('modules/key.css');
+@import url('modules/dashboard.css');
+@import url('modules/transfer.css');
+
+:root {
+    --default-font:'Hind', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.bank-background {
+    background: url('../../img/bank.png') no-repeat center center;
+    background-size: cover;
+}
+
+.black-bg {
+    background-color: rgb(33, 33, 33, .89);
+}
+
+.d-flex {
+    display: flex;
+    height: inherit;
+}
+
+.separation {
+    height: inherit;
+    margin-left: 10%;
+    margin-right: 10%;
+}

@@ -1,0 +1,105 @@
+.transfer {
+    height: 96vh;
+    font-family: var(--default-font);
+}
+
+.transfer .contacts {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.contacts h2 {
+    color: rgb(226, 227, 227, 1);
+    margin-right: 10px;
+}
+
+.contacts select {
+    width: 200px;
+    background-color: #212121;
+    color: rgb(226, 227, 227, 1);
+}
+
+.contacts select:focus{
+    color: rgb(226, 227, 227, 1);
+    background-color: #212121;
+    outline: none;
+}
+
+.contacts button {
+    margin-left: 10px;
+    background-color: rgb(226, 227, 227, 1);
+    color: #212121;
+    border: none;
+    width: 75px;
+}
+
+.contacts button:hover {
+    cursor: pointer;
+}
+
+.transfer .not-contact{
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+    color: rgb(226, 227, 227, 1);
+}
+
+.not-contact a {
+    color: firebrick;
+    text-decoration: underline;
+}
+
+.transfer .add-data {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.add-data label {
+    color: rgb(226, 227, 227, 1);
+    font-size: 20px;
+}
+
+.add-data button {
+    margin-top: 20px;
+    background-color: rgb(226, 227, 227, 1);
+    color: #212121;
+    border: none;
+    padding: 10px 20px;
+}
+
+.transfer .transfer-data {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.transfer-data label {
+    color: rgb(226, 227, 227, 1);
+    font-size: 24px;
+}
+
+.transfer-data input {
+    font-size: 20px;
+    outline: none;
+    width: 300px;
+}
+
+.transfer-data input:focus {
+    outline:none;
+}
+
+.transfer-data button {
+    margin-top: 20px;
+    background-color: rgb(226, 227, 227, 1);
+    color: #212121;
+    border: none;
+    padding: 10px 20px;
+}
+
+.transfer-data button:hover{
+    cursor: pointer;
+}

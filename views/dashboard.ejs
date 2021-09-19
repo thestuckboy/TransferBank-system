@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.fullname %> - Dashboard</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!--Font Awesome-->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!--Own Stylesheet-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <%- include('layouts/navbar.ejs'); %>
+    </header>
+
+    <div class="bank-background">
+        <div class="black-bg">
+            <div class="separation">
+                <div class="main-dashboard">
+                    <div class="welcome">
+                        <div class="name">
+                            <h1>Welcome <%= user.fullname %>!</h1>
+                            <p>The last time you login: <b><%= user.lastLoginDate %></b></p>
+                        </div>
+                        <div class="balance">
+                            <h1>Balance:</h1>
+                            <p><%= user.balance %>$</p>
+                        </div>
+                    </div>
+                    <div class="transactions">
+                        <h2>Recent transactions:</h2>
+                    </div>
+                    <table>
+                        <tr>
+                          <th>From / To</th>
+                          <th>Amount</th>
+                          <th>Date</th>
+                        </tr>
+                        <% user.transactions.forEach((i) => { %>
+                            <tr>
+                                <td><%= i.target %></td>
+                                <td><%= i.amount %></td>
+                                <td><%= i.date %></td>
+                            </tr>
+                        <% }); %>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascript/script.js"></script>
+</body>
+</html>

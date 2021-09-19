@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Bank</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!--Font Awesome-->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+    <!--Own Stylesheet-->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <%- include('layouts/navbar.ejs'); %>
+    </header>
+    <div class="bank-background">
+        <div class="main">
+            <div class="presentation">
+                <div> <!--50%-->
+                    <i class="fas fa-comment-dollar" id="anim1"></i>
+                    <h1 id="anim2">Save your money here</h1>
+                </div> 
+                <div id="rightside"> <!--50%-->
+                    <i id="anim3" class="fas fa-university"></i>
+                    <h1 id="anim3">Transfer Bank</h1>
+                    <a id="anim4" href="/create-wallet" class="register"><i class="fas fa-wallet wallet"></i>Create your wallet now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        gsap.from('#anim1', { duration: 1, y:-100, opacity: 0, delay:.8});
+        gsap.from('#anim2', { opacity: 0, duration: 1, y:100, delay: 1.1});
+        gsap.from('#anim3', { opacity: 0, duration: 1, x:-100, delay: 1.4});
+        gsap.from('#anim4', { opacity: 0, duration: 1, x:100, delay: 1.8});
+
+    </script>
+    <script src="/javascript/script.js"></script>
+</body>
+</html>
